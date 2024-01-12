@@ -28,7 +28,7 @@ class OC:
 
     def to_dict(self) -> oc_json:
         return {
-            "id": self.character_id,
+            "character_id": self.character_id,
             "messages": self.messages,
             "memories": self.memories,
             "name": self.name,

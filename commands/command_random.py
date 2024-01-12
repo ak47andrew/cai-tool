@@ -18,4 +18,4 @@ def entry():
         oc: OC = random.choice(ocs)
         print(oc)
     except FileNotFoundError:
-        tools.error("No parsed OCs found! use main.py --command parse")
+        tools.error("No parsed OCs found! use cai parse")

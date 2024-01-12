@@ -1,0 +1,3 @@
+#! /bin/bash
+source /home/tumpa/Projects/CAI/venv/bin/activate
+python /home/tumpa/Projects/CAI/main.py $@

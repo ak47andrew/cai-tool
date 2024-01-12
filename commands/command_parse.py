@@ -57,7 +57,15 @@ def output_json(ocs: list[OC]) -> None:
 def entry() -> None:
     tools.setColor(colorama.Fore.BLUE)
     print("Starting parsing....")
-    ocs: list[OC] = parse_plain()
+
+    try:
+        ocs: list[OC] = parse_plain()
+    except FileNotFoundError:
+        return tools.error("plaintext.txt is not found! Did you created it?")
+
+    if not ocs:
+        return tools.error("No characters found! Did you filled up plaintext.txt?")
+
     print(f"Parsed {character_id - 1} characters! Formatting...")
     output_json(ocs)
     print("Formatted!")
