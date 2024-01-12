@@ -18,10 +18,10 @@ def error(msg: Any):
 
 function_type = TypeVar("function_type")
 def timer(func: function_type) -> function_type:
-    def wrapper():
+    def wrapper(*args, **kwargs):
         start = time()
 
-        func()  # type: ignore
+        func(*args, **kwargs)  # type: ignore
 
         setColor(colorama.Fore.GREEN)
         print(f"Done in {time() - start} sec...")
