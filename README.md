@@ -15,7 +15,7 @@
 Cai stands for [Crush on AI](https://crushon.ai/). This tool will help you with managing your Favorite characters in CRUD: create, read, update and delete
 
 > [!NOTE]
-> `ChatGPT tl;dr` This project provides a tool to manage your favorite characters on Crush on AI platform. However, using it violates Crush on AI's terms of service and can lead to account banning. The tool requires GNU/Linux and Python 3.9+. You can download executables from the Release tab to avoid installation steps. The tool allows CRUD operations on your favorite characters and is accessible via shell or terminal only. The README provides instructions on how to install and use the tool, including commands for parsing, removing, and randomly selecting a character.
+> `ChatGPT tl;dr` This project provides a tool to manage your favorite characters on Crush on AI platform. However, using it violates Crush on AI's terms of service and can lead to account banning. The tool requires Python 3.9+. You can download executables from the Release tab to avoid installation steps. The tool allows CRUD operations on your favorite characters and is accessible via shell or terminal only. The README provides instructions on how to install and use the tool, including commands for parsing, removing, and randomly selecting a character.
 
 ## Requirements
 
