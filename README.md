@@ -9,6 +9,9 @@
 > [!NOTE]
 > You can ignore "Requirements" and "Installation" blocks by downloading executables on the [Release tab](https://github.com/Tumpa-Prizrak/cai-tool/releases)
 
+> [!NOTE]
+> Installation guide is written for linux users. Windows are pretty similar, but google steps that's outputting an error
+
 Cai stands for [Crush on AI](https://crushon.ai/). This tool will help you with managing your Favorite characters in CRUD: create, read, update and delete
 
 > [!NOTE]
@@ -16,7 +19,6 @@ Cai stands for [Crush on AI](https://crushon.ai/). This tool will help you with 
 
 ## Requirements
 
-- `GNU/Linux`
 - `Python 3.9+`
 
 ## Installation
@@ -51,7 +53,7 @@ chmod +x cai
 ```
 
 > [!TIP]
-> You can copy `cai` file to any directory in your `$PATH` variable. For example to `/usr/bin`. This will make utility available from any directory. Use cp command for this: `cp cai /usr/bin/cai`.
+> You can copy `cai` file to any directory in your `$PATH` variable. For example to `/usr/bin`. This will make utility available from any directory. Use cp command for this: `sudo cp cai /usr/bin/cai`.
 
 ## Usage
 
