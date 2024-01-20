@@ -1,0 +1,40 @@
+************* Module classes
+app/classes.py:63:11: W1116: Second argument of isinstance is not a type (isinstance-second-argument-not-valid-type)
+************* Module commands.command_random
+app/commands/command_random.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/commands/command_random.py:4:0: E0401: Unable to import 'config' (import-error)
+app/commands/command_random.py:5:0: E0401: Unable to import 'app' (import-error)
+app/commands/command_random.py:6:0: E0401: Unable to import 'app.classes' (import-error)
+app/commands/command_random.py:27:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+************* Module commands.command_parse
+app/commands/command_parse.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/commands/command_parse.py:6:0: E0401: Unable to import 'config' (import-error)
+app/commands/command_parse.py:7:0: E0401: Unable to import 'app' (import-error)
+app/commands/command_parse.py:8:0: E0401: Unable to import 'app.classes' (import-error)
+app/commands/command_parse.py:10:0: C0103: Constant name "character_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+app/commands/command_parse.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/commands/command_parse.py:14:4: W0603: Using the global statement (global-statement)
+app/commands/command_parse.py:39:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/commands/command_parse.py:40:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+app/commands/command_parse.py:48:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/commands/command_parse.py:52:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+app/commands/command_parse.py:52:20: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+app/commands/command_parse.py:57:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/commands/command_parse.py:57:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+************* Module commands.command_remove
+app/commands/command_remove.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
+app/commands/command_remove.py:34:0: C0301: Line too long (129/100) (line-too-long)
+app/commands/command_remove.py:48:0: C0303: Trailing whitespace (trailing-whitespace)
+app/commands/command_remove.py:51:0: C0303: Trailing whitespace (trailing-whitespace)
+app/commands/command_remove.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/commands/command_remove.py:6:0: E0401: Unable to import 'app' (import-error)
+app/commands/command_remove.py:7:0: E0401: Unable to import 'app.classes' (import-error)
+app/commands/command_remove.py:8:0: E0401: Unable to import 'app.commands.command_parse' (import-error)
+app/commands/command_remove.py:9:0: E0401: Unable to import 'app.commands.command_random' (import-error)
+app/commands/command_remove.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/commands/command_remove.py:49:19: W0631: Using possibly undefined loop variable 'oc' (undefined-loop-variable)
+app/commands/command_remove.py:13:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+
+------------------------------------------------------------------
+Your code has been rated at 5.26/10 (previous run: 4.90/10, +0.36)
+

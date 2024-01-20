@@ -4,8 +4,8 @@ import re
 import colorama
 
 import config
-from classes import OC, oc_json
-import tools
+from app import tools
+from app.classes import OC, OcJson
 
 character_id = 1
 
@@ -37,25 +37,25 @@ def data_to_oc(data: list[str]) -> OC:
 
 
 def parse_plain() -> list[OC]:
-    with open(config.input_plain) as f:
+    with open(config.INPUT_PLAIN) as f:
         test_str: str = f.read()
 
-    matches = re.findall(config.regex, test_str, re.MULTILINE)
+    matches = re.findall(config.REGEX, test_str, re.MULTILINE)
 
     return [data_to_oc(i) for i in matches]
 
 
 def output_json(ocs: list[OC]) -> None:
-    data: dict[str, list[oc_json]] = {
+    data: dict[str, list[OcJson]] = {
         "chars": [i.to_dict() for i in ocs]
     }
-    json.dump(data, open(config.input_ocs, "w"), indent=4)
+    json.dump(data, open(config.INPUT_OCS, "w"), indent=4)
 
 
 
 @tools.timer
 def entry() -> None:
-    tools.setColor(colorama.Fore.BLUE)
+    tools.set_color(colorama.Fore.BLUE)
     print("Starting parsing....")
 
     try:

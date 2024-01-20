@@ -1,10 +1,12 @@
 from os import system
 from typing import Optional
+
 from fuzzywuzzy import fuzz
-from commands.command_random import get_ocs
-from commands.command_parse import output_json
-from classes import OC
-import tools
+
+from app import tools
+from app.classes import OC
+from app.commands.command_parse import output_json
+from app.commands.command_random import get_ocs
 
 
 @tools.timer

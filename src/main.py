@@ -1,11 +1,12 @@
 from typing import Optional
-import colorama
-import click
-from commands.command_parse import entry as parse
-from commands.command_random import entry as random
-from commands.command_remove import entry as remove
-import tools
 
+import click
+import colorama
+
+from app import tools
+from app.commands.command_parse import entry as parse
+from app.commands.command_random import entry as random
+from app.commands.command_remove import entry as remove
 
 colorama.init(autoreset=False)
 
