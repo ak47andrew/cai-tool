@@ -30,7 +30,7 @@ jobs:
         python -m src parse
         python -m src random
         python -m src remove --no-confirm
-        rm root_folder
+        rm src/root_folder
         rm plaintext.txt
         rm ocs.json
     # rm pylint.txt; pylint src >> pylint.txt
