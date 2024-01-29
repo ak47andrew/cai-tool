@@ -25,7 +25,7 @@ from src.app.commands.command_parse import output_json
 from src.app.commands.command_random import get_ocs
 
 
-def remove_by_id(character_id: int):  # pylint: disable=inconsistent-return-statements
+def remove_by_id(character_id: int, confirm: bool):  # pylint: disable=inconsistent-return-statements
     """
     Remove an OC from the list of OCs by the given character_id.
 
@@ -37,15 +37,16 @@ def remove_by_id(character_id: int):  # pylint: disable=inconsistent-return-stat
         return tools.error("No OCs found! Did you filled plaintext.txt?")
     oc: OC = sorted(ocs, key=lambda x: x.character_id)[character_id - 1]
     print(oc)
-    while True:
-        answer: str = input("Process? [Y/n] ").lower()
-        match answer:
-            case "y" | "":
-                break
-            case "n":
-                return
-            case _:
-                continue
+    if confirm:
+        while True:
+            answer: str = input("Process? [Y/n] ").lower()
+            match answer:
+                case "y" | "":
+                    break
+                case "n":
+                    return
+                case _:
+                    continue
     del ocs[character_id - 1]
 
     save(ocs)
@@ -105,7 +106,8 @@ def save(ocs: list[OC]):
 @tools.timer
 def entry(  # pylint: disable=inconsistent-return-statements
         character_id: Optional[int],
-        name: Optional[str]
+        name: Optional[str],
+        confirm: bool
     ) -> None:
     """
     Remove an OC by either its ID or name.
@@ -115,7 +117,7 @@ def entry(  # pylint: disable=inconsistent-return-statements
         name (Optional[str]): The name of the OC to be removed. Defaults to None.
     """
     if character_id is not None:
-        remove_by_id(character_id)
+        remove_by_id(character_id, confirm)
     elif name is not None:
         remove_by_name(name)
     else:

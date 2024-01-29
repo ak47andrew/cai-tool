@@ -1,6 +1,7 @@
 from os.path import join
 
-ROOT_FOLDER = r"/home/tumpa/cai"
+with open("src/root_folder") as f:
+    ROOT_FOLDER = f.read().rstrip('\n')
 INPUT_PLAIN: str = join(ROOT_FOLDER, "plaintext.txt")
 INPUT_OCS: str = join(ROOT_FOLDER, "ocs.json")
 

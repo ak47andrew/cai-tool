@@ -38,7 +38,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-- Change the *root_folder* variable in `config.py` to your home folder or another directory that contains the `cai` directory - a place where the utility will save its OC database.
+- Create `root_folder` in the `src` directory and place there your home folder or another directory that contains the `cai` directory - a place where the utility will save its OC database.
 - Change directories at the `cai` file to place with the `src` folder in it.
 - Allow execution of the `cai` file
 

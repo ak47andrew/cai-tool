@@ -22,9 +22,11 @@ def random_command():
     random()
 
 @click.command("remove")
-@click.option("--id", "character_id", help="OC's id")
+@click.option("--id", "character_id", help="OC's id", type=int)
 @click.option("--name", help="OC's name")
-def remove_command(character_id: Optional[str | int], name: Optional[str]):
+@click.option("--confirm/--no-confirm", show_default=True, default=True, 
+              help="Only if using id, is prompting for removal.")
+def remove_command(character_id: Optional[int], name: Optional[str], confirm: bool):
     """remove OC by id or name"""
     try:
         character_id = int(character_id)  # type: ignore
@@ -32,9 +34,9 @@ def remove_command(character_id: Optional[str | int], name: Optional[str]):
         return tools.error(f"id must be a number, not {character_id}!")
     except TypeError:
         character_id = None
-    
+
     try:
-        remove(character_id, name)
+        remove(character_id, name, confirm)
     except IndexError as e:
         if character_id is not None:
             return tools.error("id is not found!")

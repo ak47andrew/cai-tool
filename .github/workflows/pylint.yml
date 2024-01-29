@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix:
-        verison: ["1.12", "1.11", "1.10", "1.9", "1.8", "1.7", "1.6"]
+        verison: ["3.13.0-alpha.3", "3.12", "3.11", "3.10", "3.9", "3.8", "3.7", "3.6"]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -22,4 +22,14 @@ jobs:
     - name: Analyzing the code with pylint
       run: |
         pylint src --rcfile=standard.rc
+    - name: Testing usability
+      run: |
+        wget https://raw.githubusercontent.com/Tumpa-Prizrak/Tumpa-Prizrak/master/plaintext.txt
+        echo . >> root_folder
+        python -m src parse
+        python -m src random
+        python -m src remove --no-confirm
+        rm root_folder
+        rm plaintext.txt
+        rm ocs.json
     # rm pylint.txt; pylint src >> pylint.txt
