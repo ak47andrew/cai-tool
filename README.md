@@ -19,7 +19,7 @@ Cai stands for [Crush on AI](https://crushon.ai/). This tool will help you with 
 
 ## Requirements
 
-- `Python 3.9+`
+- `Python 3.11+`
 
 ## Installation
 
