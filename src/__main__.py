@@ -1,4 +1,3 @@
-# pylint: skip-file
 from typing import Optional
 
 import click
