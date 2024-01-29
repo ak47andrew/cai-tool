@@ -20,5 +20,5 @@ jobs:
         pip install pylint
     - name: Analyzing the code with pylint
       run: |
-        pylint src/app --fail-under 8
+        pylint src --fail-under 9
     # rm pylint.txt; pylint src >> pylint.txt
