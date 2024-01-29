@@ -1,3 +1,4 @@
+# pylint: skip-file
 from os.path import join
 
 ROOT_FOLDER = r"/home/tumpa/cai"

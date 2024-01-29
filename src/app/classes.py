@@ -60,7 +60,7 @@ class OC:
                f"description: {self.description}\n\ntags: {', '.join(self.tags)}"
 
     def __eq__(self, __value) -> bool:
-        if isinstance(__value, Self):  # type: ignore
+        if isinstance(__value, Self):  # pylint: disable=isinstance-second-argument-not-valid-type
             return self.character_id == __value.character_id and self.name == __value.name
         if isinstance(__value, int):
             return self.character_id == __value

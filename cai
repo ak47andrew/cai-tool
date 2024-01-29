@@ -1,3 +1,0 @@
-#! /bin/bash
-source /home/tumpa/Projects/cai-tool/venv/bin/activate
-python /home/tumpa/Projects/cai-tool/src/main.py $@

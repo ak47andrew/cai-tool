@@ -1,3 +1,16 @@
+"""
+This module provides functions to generate a random OC object from a list of OC objects loaded 
+from a JSON file. 
+The JSON file is specified in the config module.
+
+Functions:
+- get_ocs(): Returns a list of OC objects loaded from a JSON file specified in the config module.
+- entry(): Generates a random OC object from a list of OC objects loaded from a JSON file. 
+           The JSON file is specified in the config module.
+
+Classes:
+- None
+"""
 import json
 import random
 
@@ -24,7 +37,7 @@ def get_ocs() -> list[OC]:
     return [from_dict(i) for i in data.get("chars", [])]
 
 
-def entry():
+def entry():  # pylint: disable=inconsistent-return-statements
     """
     Generates a random OC object from a list of OC objects loaded from a JSON file. 
     The JSON file is specified in the config module.
