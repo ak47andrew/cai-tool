@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 
 - Change the *root_folder* variable in `config.py` to your home folder or another directory that contains the `cai` directory - a place where the utility will save its OC database.
-- Change directories at the `cai` file to place with the `main.py` script in it.
+- Change directories at the `cai` file to place with the `src` folder in it.
 - Allow execution of the `cai` file
 
 ```sh
@@ -60,7 +60,7 @@ chmod +x cai
 See `cai --help` for brief usage. All interactions will be available only using a shell or other type of terminal. You can't use this via UI
 
 > [!NOTE]
-> This utility doesn't manage your real data on the CAI platform - it's on your local PC only. Util there's no public API available - it's impossible to implement
+> This utility doesn't manage your real data on the CAI platform - it's on your local PC only. Util there's no public API available - it's almost impossible to implement
 
 ### First using
 
