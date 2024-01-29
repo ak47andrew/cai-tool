@@ -14,9 +14,9 @@ Classes:
 import json
 import random
 
-import config  # type: ignore
-from app import tools  # type: ignore
-from app.classes import OC, from_dict  # type: ignore
+from src import config
+from src.app import tools
+from src.app.classes import OC, from_dict
 
 
 def get_ocs() -> list[OC]:
@@ -51,7 +51,7 @@ def entry():  # pylint: disable=inconsistent-return-statements
     try:
         ocs: list[OC] = get_ocs()
         if not ocs:
-            return tools.error("No OCs found! Did you filled plaintext.txt?")  # type: ignore
+            return tools.error("No OCs found! Did you filled plaintext.txt?")
         oc: OC = random.choice(ocs)
         print(oc)
     except FileNotFoundError:

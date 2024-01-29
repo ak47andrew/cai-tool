@@ -19,10 +19,10 @@ from typing import Optional
 
 from fuzzywuzzy import fuzz
 
-from app import tools
-from app.classes import OC
-from app.commands.command_parse import output_json
-from app.commands.command_random import get_ocs
+from src.app import tools
+from src.app.classes import OC
+from src.app.commands.command_parse import output_json
+from src.app.commands.command_random import get_ocs
 
 
 def remove_by_id(character_id: int):  # pylint: disable=inconsistent-return-statements

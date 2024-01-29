@@ -1,0 +1,5 @@
+#! /bin/bash
+
+cd /  # Change this line to the app's directory
+source ./venv/bin/activate
+python -m src $@

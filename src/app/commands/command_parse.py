@@ -15,9 +15,9 @@ import re
 
 import colorama
 
-import config
-from app import tools
-from app.classes import OC, OcJson
+from src import config
+from src.app import tools
+from src.app.classes import OC, OcJson
 
 
 def data_to_oc(data: list[str], character_id: int) -> OC:
